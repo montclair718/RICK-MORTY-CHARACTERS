@@ -1,0 +1,15 @@
+button {
+  height: 50px;
+  width: 100px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+div0 {
+  margin-left: auto;
+  margin-right: auto;
+}
