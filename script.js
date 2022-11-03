@@ -51,6 +51,8 @@ div0.style.flexWrap = 'wrap'
 div0.style.gap = '10px 10px'
 const input = document.createElement('input')
 input.style.width = '400px'
+input.style.height = '30px'
+input.placeholder = 'filter characters by name';
 input.style.marginTop = '10px'
 const p = document.createElement('p')
 
