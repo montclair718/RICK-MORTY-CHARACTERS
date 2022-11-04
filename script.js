@@ -47,12 +47,69 @@ const heading1 = document.querySelector('h1')
 heading1.addEventListener('mouseenter', change_h1_color)
 heading1.addEventListener('mouseleave', change_h1_color_leave)
 
+const input_checkbox1 = document.createElement('input')
+input_checkbox1.addEventListener('click', sort1)
+function sort1() {
+    if (input_checkbox1.checked) {
+        div0.innerHTML = ''; 
+        for (let card of cards) {
+            if (card.gender === 'Male') {
+                create_card(card)
+            }
+        }
+    } else {
+        div0.innerHTML = ''; 
+        create_cards(cards)
+    }
+}
+const input_checkbox2 = document.createElement('input')
+input_checkbox2.addEventListener('click', sort2)
+function sort2() {
+    if (input_checkbox2.checked) {
+        div0.innerHTML = '';
+        for (let card of cards) {
+            if (card.species === 'Alien') {
+                create_card(card)
+            }
+        }
+    } else {
+        div0.innerHTML = '';
+        create_cards(cards)
+    }
+}
+const input_checkbox3 = document.createElement('input')
+input_checkbox3.addEventListener('click', sort3)
+function sort3() {
+    if (input_checkbox3.checked) {
+        div0.innerHTML = '';
+        for (let card of cards) {
+            if (card.status === 'Alive') {
+                create_card(card)
+            }
+        }
+    } else {
+        div0.innerHTML = '';
+        create_cards(cards)
+    }
+}
+input_checkbox1.type = 'checkbox'
+const span1 = document.createElement('span')
+span1.textContent = 'gender : Male'
+input_checkbox2.type = 'checkbox'
+const span2 = document.createElement('span')
+span2.textContent = 'species : alien'
+input_checkbox3.type = 'checkbox'
+const span3 = document.createElement('span')
+span3.textContent = 'status : alive'
+
+const div_check_and_span_wrapper1 = document.createElement('div')
+const div_check_and_span_wrapper2 = document.createElement('div')
+const div_check_and_span_wrapper3 = document.createElement('div')
     
 function change_h1_color() {
     if ('mouseenter') {
         heading1.style.textDecoration = 'underline';
         heading1.style.color = 'red';
-
     }
 }
 function change_h1_color_leave() {
@@ -75,14 +132,27 @@ input.style.marginTop = '10px'
 const p = document.createElement('p')
 
 wrapper.append(input)
-
 document.body.append(wrapper)
 document.body.append(div0)
+wrapper.append(
+    input_checkbox1,
+    input_checkbox2,
+    input_checkbox3)
+wrapper.append(
+    span1,
+    span2,
+    span3)
+wrapper.append(
+    div_check_and_span_wrapper1,
+    div_check_and_span_wrapper2,
+    div_check_and_span_wrapper3)
+div_check_and_span_wrapper1.append(input_checkbox1, span1)
+div_check_and_span_wrapper2.append(input_checkbox2, span2)
+div_check_and_span_wrapper3.append(input_checkbox3, span3)
 
 function create_cards(cards) {
     for (let card of cards) {
         create_card(card)
-       
     }
 }
 
