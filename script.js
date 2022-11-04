@@ -42,7 +42,25 @@ function onload(data) {
     
 }
 
+document.body.style.backgroundColor = 'yellow'
+const heading1 = document.querySelector('h1')
+heading1.addEventListener('mouseenter', change_h1_color)
+heading1.addEventListener('mouseleave', change_h1_color_leave)
 
+    
+function change_h1_color() {
+    if ('mouseenter') {
+        heading1.style.textDecoration = 'underline';
+        heading1.style.color = 'red';
+
+    }
+}
+function change_h1_color_leave() {
+    if ('mouseleave') {
+        heading1.style.textDecoration = 'none';
+        heading1.style.color = 'black';
+    }
+}
 const wrapper = document.createElement('div')
 wrapper.className = 'wrapper'
 const div0 = document.createElement('div')
@@ -70,6 +88,8 @@ function create_cards(cards) {
 
 const BTN = document.querySelector('#btn1').addEventListener('click', my_foo)
 const BTN2 = document.querySelector('#btn2').addEventListener('click', my_foo_back)
+
+
 function my_foo() {
     div0.innerHTML = "";
 getcards(next_page)
@@ -101,11 +121,8 @@ function let_x() {
     }
 }
 
-// $(document).ready(function(){
-//     $('button').click(function() {
-//         $('body').hide(3000);
-//     });
-// });
+
+
 
 
 
