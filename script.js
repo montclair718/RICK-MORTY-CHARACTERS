@@ -207,13 +207,6 @@ function let_x() {
         if (card.name.toLowerCase().includes(x.trim())) {
             create_card(card);
         }
-        else if (card.name.toUpperCase().includes(x.trim())) {
-            create_card(card);
-        }
-        else if (card.name.includes(x.charAt(0).toUpperCase().trim())) {
-             create_card(card);
-        }
-    
     }
 }
 
