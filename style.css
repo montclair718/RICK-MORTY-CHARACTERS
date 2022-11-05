@@ -31,7 +31,6 @@ button {
     flex-direction: column;
     max-width: 375px;
   }
-
   .wrapper1 {
     display: none;
   }

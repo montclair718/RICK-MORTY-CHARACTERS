@@ -53,11 +53,12 @@ function sort1() {
     if (input_checkbox1.checked) {
         div0.innerHTML = ''; 
         for (let card of cards) {
-            if (card.gender === 'Male') {
-                create_card(card)
+            if (card.gender === 'Female') {
+                create_card(card);
             }
-        }
-    } else {
+        }  
+    }  
+    else {
         div0.innerHTML = ''; 
         create_cards(cards)
     }
@@ -66,6 +67,7 @@ const input_checkbox2 = document.createElement('input')
 input_checkbox2.addEventListener('click', sort2)
 function sort2() {
     if (input_checkbox2.checked) {
+     
         div0.innerHTML = '';
         for (let card of cards) {
             if (card.species === 'Alien') {
@@ -75,12 +77,15 @@ function sort2() {
     } else {
         div0.innerHTML = '';
         create_cards(cards)
+        
+        
     }
 }
 const input_checkbox3 = document.createElement('input')
 input_checkbox3.addEventListener('click', sort3)
 function sort3() {
     if (input_checkbox3.checked) {
+       
         div0.innerHTML = '';
         for (let card of cards) {
             if (card.status === 'Alive') {
@@ -90,15 +95,19 @@ function sort3() {
     } else {
         div0.innerHTML = '';
         create_cards(cards)
+   
     }
 }
-input_checkbox1.type = 'checkbox'
+input_checkbox1.type = 'radio'
+input_checkbox1.name = 'radio'
 const span1 = document.createElement('span')
-span1.textContent = 'Males'
-input_checkbox2.type = 'checkbox'
+span1.textContent = 'Females'
+input_checkbox2.type = 'radio'
+input_checkbox2.name = 'radio'
 const span2 = document.createElement('span')
 span2.textContent = 'Aliens'
-input_checkbox3.type = 'checkbox'
+input_checkbox3.type = 'radio'
+input_checkbox3.name = 'radio'
 const span3 = document.createElement('span')
 span3.textContent = 'Alive'
 
