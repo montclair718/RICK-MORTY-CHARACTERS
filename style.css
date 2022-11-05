@@ -35,7 +35,7 @@ button {
     display: none;
   }
   .input_filter {
-    max-width: 350px;
+    display: none;
   }
 
   .div1 {
