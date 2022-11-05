@@ -54,7 +54,7 @@ function sort1() {
         div0.innerHTML = ''; 
         for (let card of cards) {
             if (card.gender === 'Female') {
-                create_card(card);
+                create_card(card); 
             }
         }  
     }  
@@ -168,6 +168,7 @@ div_check_and_span_wrapper3.append(input_checkbox3, span3)
 function create_cards(cards) {
     for (let card of cards) {
         create_card(card)
+        
     }
 }
 
@@ -178,7 +179,8 @@ document.querySelector('#btn2').addEventListener('click', my_foo_back)
 
 function my_foo() {
     div0.innerHTML = "";
-getcards(next_page)
+    getcards(next_page)
+    
 }
 function my_foo_back() {
     div0.innerHTML = "";
@@ -203,8 +205,15 @@ function let_x() {
     div0.innerHTML = '';
     for (let card of cards) {
         if (card.name.toLowerCase().includes(x.trim())) {
-            create_card(card); 
+            create_card(card);
         }
+        else if (card.name.toUpperCase().includes(x.trim())) {
+            create_card(card);
+        }
+        else if (card.name.includes(x.charAt(0).toUpperCase().trim())) {
+             create_card(card);
+        }
+    
     }
 }
 
