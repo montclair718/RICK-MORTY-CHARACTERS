@@ -13,3 +13,34 @@ div0 {
 button {
   cursor: pointer;
 }
+
+@media only screen and (max-width: 400px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    text-align: center;
+  }
+  #button_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+  .wrapper {
+    flex-direction: column;
+    max-width: 375px;
+  }
+
+  .wrapper1 {
+    display: none;
+  }
+  .input_filter {
+    max-width: 100%;
+  }
+
+  .div1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

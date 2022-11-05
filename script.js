@@ -94,17 +94,20 @@ function sort3() {
 }
 input_checkbox1.type = 'checkbox'
 const span1 = document.createElement('span')
-span1.textContent = 'gender : Male'
+span1.textContent = 'Males'
 input_checkbox2.type = 'checkbox'
 const span2 = document.createElement('span')
-span2.textContent = 'species : alien'
+span2.textContent = 'Aliens'
 input_checkbox3.type = 'checkbox'
 const span3 = document.createElement('span')
-span3.textContent = 'status : alive'
+span3.textContent = 'Alive'
 
 const div_check_and_span_wrapper1 = document.createElement('div')
+div_check_and_span_wrapper1.className = 'wrapper1'
 const div_check_and_span_wrapper2 = document.createElement('div')
+div_check_and_span_wrapper2.className = 'wrapper1'
 const div_check_and_span_wrapper3 = document.createElement('div')
+div_check_and_span_wrapper3.className = 'wrapper1'
     
 function change_h1_color() {
     if ('mouseenter') {
@@ -118,14 +121,17 @@ function change_h1_color_leave() {
         heading1.style.color = 'black';
     }
 }
+
 const wrapper = document.createElement('div')
 wrapper.className = 'wrapper'
 const div0 = document.createElement('div')
+div0.className = 'div0'
 div0.style.display = 'flex'
 div0.style.flexWrap = 'wrap'
 div0.style.gap = '10px 10px'
 const input = document.createElement('input')
-input.style.width = '400px'
+input.className = 'input_filter'
+input.style.width = '100%'
 input.style.height = '30px'
 input.placeholder = 'filter characters by name';
 input.style.marginTop = '10px'
@@ -156,8 +162,9 @@ function create_cards(cards) {
     }
 }
 
-const BTN = document.querySelector('#btn1').addEventListener('click', my_foo)
-const BTN2 = document.querySelector('#btn2').addEventListener('click', my_foo_back)
+document.querySelector('#btn1').addEventListener('click', my_foo)
+document.querySelector('#btn2').addEventListener('click', my_foo_back)
+
 
 
 function my_foo() {
@@ -170,6 +177,7 @@ function my_foo_back() {
 }
 function create_card(card) {
     const div1 = document.createElement('div')
+    div1.className = 'div1'
     const h2 = document.createElement('h2')
     const image = document.createElement('img')
     image.src = card.image
